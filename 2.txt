@@ -1,0 +1,19 @@
+213.226.114.162
+
+root
+
+OFWlf980xN
+
+Try to give permissions to the storage folder.
+sudo chmod -R 777 storage
+
+after that run:
+php artisan cache:clear
+php artisan config:clear
+php artisan config:cache
+
+curl -s https://laravel.build/app | bash
+
+host-gateway
+
+ Паспорт 	СНИЛС ИИН

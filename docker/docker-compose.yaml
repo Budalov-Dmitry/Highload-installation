@@ -134,6 +134,7 @@ services:
                 - db-slave-2
 
 
+
         nginx:
             container_name: nginx
             build:
@@ -165,6 +166,17 @@ services:
             networks:
                 - vk-network
 
+        postgres:
+            image: postgres:13.3
+            environment:
+                POSTGRES_DB: "habrdb"
+                POSTGRES_USER: "habrpguser"
+                POSTGRES_PASSWORD: "pgpwd4habr"
+            ports:
+                - "5432:5432"
+            networks:
+                - vk-network
+
         memcached:
             container_name: memcached
             image: memcached:latest
@@ -179,7 +191,7 @@ services:
             env_file:
                 - ./db/master/.env.master
             ports:
-                - "4406:3306"
+                - "3306:3306"
             volumes:
                 - ./db/master/master.sql:/docker-entrypoint-initdb.d/start.sql
                 - ./db/master/mysql.master.cnf:/etc/mysql/conf.d/mysql.master.cnf
