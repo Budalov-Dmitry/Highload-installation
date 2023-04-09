@@ -16,4 +16,4 @@ curl -s https://laravel.build/app | bash
 
 host-gateway
 
- Паспорт 	СНИЛС ИИН
+docker exec vk php artisan migrate
