@@ -21,3 +21,7 @@ docker exec vk php artisan migrate
 https://github.com/bradtraversy/laragigs
 
 https://github.com/CutCodeRu/laravel-beginner-level
+
+/home/project
+
+http://213.226.114.162
