@@ -1,0 +1,30 @@
+'title' => ['required', 'regex:/^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/']
+
+
+<td> color->id </td>
+<td> <a>route на цвет</a></td>
+
+<td> 
+<div style = "width: 6px;
+height: 16px;
+background:{{'#', $color->title}}
+"> 
+
+</div>
+ </td>
+ $data = $request->validated();
+
+ $tagsIDs = $data['tags'];
+ $tagsIDs = $data['tags'];
+ unset($data['tags'], $data['tags'])
+
+ $product = Product::firstOrCreate([
+    'title' => $data['title]
+ ], $data);
+
+ foreach (tagsIDs as tagsID) {
+    ProductTag::firstOrCreate([
+        'product_id' => $product->id
+        'tag_id' => $tagsIDs->id
+    ])
+ }
