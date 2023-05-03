@@ -1,4 +1,6 @@
-'title' => ['required', 'regex:/^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/']
+<?php
+
+//'title' => ['required', 'regex:/^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/'];
 
 
 <td> color->id </td>
@@ -19,12 +21,14 @@ background:{{'#', $color->title}}
  unset($data['tags'], $data['tags'])
 
  $product = Product::firstOrCreate([
-    'title' => $data['title]
+    'title' => $data['title']
  ], $data);
 
  foreach (tagsIDs as tagsID) {
     ProductTag::firstOrCreate([
-        'product_id' => $product->id
+        'product_id' => $product->id,
         'tag_id' => $tagsIDs->id
     ])
  }
+
+ $data['image'] = Storage::disk('public')->put('/Images',$data['image']);
