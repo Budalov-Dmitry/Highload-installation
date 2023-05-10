@@ -25,3 +25,11 @@ https://github.com/CutCodeRu/laravel-beginner-level
 /home/project
 
 http://213.226.114.162
+
+https://github.com/CutCodeRu/laravel-broadcast-chat-lesson
+
+npm install --save-dev laravel-echo pusher-js
+
+composer require pusher/pusher-php-server
+
+app.php >
