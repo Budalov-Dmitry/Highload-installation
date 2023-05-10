@@ -17,6 +17,7 @@ curl -s https://laravel.build/app | bash
 host-gateway
 
 docker exec vk php artisan migrate
+Ключ: NP5FC-FCFN7-2MTW6-DGHUN-MMMZ2
 
 https://github.com/bradtraversy/laragigs
 
